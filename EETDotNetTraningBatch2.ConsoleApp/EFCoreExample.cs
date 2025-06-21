@@ -14,6 +14,7 @@ namespace EETDotNetTraningBatch2.ConsoleApp
             AppDbContext db = new AppDbContext();
             List<BlogModel> lst = db.Blogs
                 .Where(x => x.DeleteFlag == false)
+                .OrderByDescending(x => x.BlogID)
                 .ToList();
             foreach (var item in lst)
             {
