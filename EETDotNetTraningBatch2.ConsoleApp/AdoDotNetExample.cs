@@ -44,6 +44,7 @@ namespace EETDotNetTraningBatch2.ConsoleApp
         //Console.WriteLine("Connection closing...");
         connection.Close();
        // Console.WriteLine("Connection close!");
+       List<BlogDto> list = new List<BlogDto>();
 
         for (int i = 0; i < dt.Rows.Count; i++)
         {
@@ -53,6 +54,13 @@ namespace EETDotNetTraningBatch2.ConsoleApp
             Console.WriteLine("BlogTitle => " + row["BlogTitle"]);
             Console.WriteLine("BlogAuthor => " + row["BlogAuthor"]);
             Console.WriteLine("BlogContent => " + row["BlogContent"]);
+
+            BlogDto blog = new BlogDto();
+                blog.BlogID = Convert.ToInt32(row["BlogID"]);
+                blog.BlogTitle = Convert.ToString(row["BlogTitle"])!;
+                blog.BlogAuthor = Convert.ToString(row["BlogAuthor"])!;
+                blog.BlogContent = Convert.ToString(row["BlogContent"])!;
+                list.Add(blog);
 
             }
     }
