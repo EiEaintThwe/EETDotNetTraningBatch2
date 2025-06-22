@@ -1,5 +1,9 @@
 ﻿
 using EETDotNetTraningBatch2.ConsoleApp;
+using EETDotNetTraningBatch2.Database;
+using EETDotNetTraningBatch2.Database.App2DbContextModels;
+
+//using Result = EETDotNetTraningBatch2.Database.App2DbContextModels.App2DbContext;
 using Microsoft.Data.SqlClient;
 using System.Data;
 
@@ -18,12 +22,20 @@ Console.WriteLine("Hello, World!");
 //dapperExample.Update();
 //dapperExample.Delete();
 
-EFCoreExample eFCoreExample = new EFCoreExample();
+//EFCoreExample eFCoreExample = new EFCoreExample();
 //eFCoreExample.Read();
 //eFCoreExample.Create();
 //eFCoreExample.Edit();
 //eFCoreExample.Update();
-eFCoreExample.Delete();
+//eFCoreExample.Delete();
+
+//Class1 class1 = new Class1();
+//int reult = class1.Method(1, 2);
+
+
+//Result db=new Result();
+//App2DbContext db= new App2DbContext();
+//db.TblBlogs.ToList();
 
 
 Console.ReadKey();
